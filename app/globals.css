@@ -6,6 +6,10 @@ body {
     color: black;
 }
 
+li {
+    @apply my-2
+}
+
 a {
     @apply font-medium text-blue-700 hover:underline
 }
