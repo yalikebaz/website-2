@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-24">
       <h1 className="text-3xl font-bold">hi, I'm Shay</h1>
-      <p className="text-base mt-1 mb-3">I build web applications in <span className="font-bold">React</span>, Node, and Go</p>
+      <p className="text-base mt-3 mb-4">I build web applications in React and Go</p>
 
       <section>
         <div className="text-base my-3">
