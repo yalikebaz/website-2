@@ -17,7 +17,7 @@ export default function Home() {
         <h1 className="text-xl my-5 font-semibold">Currently I'm:</h1>
         <ul>
           <li>💻 Working at <a href="https://www.thoughtworks.com/en-ca" target="_blank">Thoughtworks</a> as a senior software engineer</li>
-          <li>🏅 Building backend Go microservices and APIs for <a href="https://www.sportsnet.ca/">SportsNet</a>; leveraging caching strategies to optimize for speed</li>
+          <li>🏅 Building backend Go microservices and APIs for <a href="https://www.sportsnet.ca/" target="_blank">SportsNet</a>; leveraging caching strategies to optimize for speed</li>
         </ul>
       </section>
 
