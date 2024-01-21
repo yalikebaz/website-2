@@ -3,13 +3,102 @@
 @tailwind utilities;
 
 body {
-    color: black;
+  color: black;
 }
 
 li {
-    @apply my-2
+  @apply my-2
 }
 
 a {
-    @apply font-medium text-blue-700 hover:underline
+  @apply font-medium text-blue-700 hover:underline
+}
+
+.space {
+  word-spacing: 0.35rem;
+}
+
+.parrot {
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+}
+
+.disco {
+  position: absolute;
+  top: -50px;
+  left: 45%;
+  pointer-events: none;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  25% {
+    background-color: rgba(0, 0, 255, 0.5);
+  }
+
+  50% {
+    background-color: rgba(0, 255, 0, 0.5);
+  }
+
+  75% {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
+}
+
+.flashing {
+  animation: flash 1s linear infinite;
+}
+
+/* Spotlight */
+
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 5%, transparent 20%);
+  animation: moveSpotlight 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes moveSpotlight {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(25%, 25%);
+  }
+
+  50% {
+    transform: translate(50%, 0);
+  }
+
+  75% {
+    transform: translate(25%, -25%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.cursor,
+.cursor a,
+.cursor input,
+.cursor span,
+.cursor label {
+  cursor: url('/mic.png') 5 5, auto;
 }
