@@ -1,8 +1,14 @@
 "use client";
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Home() {
+  const [party, setParty] = useState(false)
+
+  const toggleParty = () => {
+    setParty(prev => !prev)
+  }
+
   return (
     <main className={`min-h-screen md:px-24 px-8 pt-12 pb-16 ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-mono"}`}>
       <div className={`flex flex-col-reverse md:items-end md:flex-row md:justify-start`}>
