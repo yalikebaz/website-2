@@ -10,7 +10,7 @@ export default function Home() {
   }
 
   return (
-    <main className={`min-h-screen md:px-24 px-8 pt-12 pb-16 ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-mono"}`}>
+    <main className={`min-h-screen md:px-24 px-8 pt-12 pb-16 overflow-x-hidden ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-mono"}`}>
       <div className={`flex flex-col-reverse md:items-end md:flex-row md:justify-start`}>
         <h1 className="text-3xl font-bold">hi, I'm Shahbaz</h1>
         <Image
@@ -22,29 +22,27 @@ export default function Home() {
           className="banana"
           style={{ visibility: party ? 'visible' : 'hidden' }}
         />
-        <Toggle toggleParty={toggleParty} />
+        <Switch toggleParty={toggleParty} />
       </div>
       <p className="text-base mt-1 mb-3">I build web applications in React and Go</p>
       {party && (
-        <>
-          <Image
-            src="/party-parrot.gif"
-            alt="parrot"
-            width={100}
-            height={100}
-            quality={100}
-            className='parrot'
-          />
-          <Image
-            src="/disco.gif"
-            alt="disco"
-            width={300}
-            height={100}
-            quality={100}
-            className='disco invisible lg:visible'
-          />
-        </>
+        <Image
+          src="/party-parrot.gif"
+          alt="parrot"
+          width={100}
+          height={100}
+          quality={100}
+          className="parrot"
+        />
       )}
+      <Image
+        src="/disco.gif"
+        alt="disco"
+        width={300}
+        height={100}
+        quality={100}
+        className={`disco transition-transform duration-700 ease-in-out ${party ? 'translate-y-0' : '-translate-y-80'} invisible lg:visible`}
+      />
       <section>
         <div className="text-base my-3">
           <a href='Siddiqui_Resume.pdf' target='_blank'>Resume</a> <span> | </span>
@@ -82,13 +80,13 @@ export default function Home() {
   )
 }
 
-// This is not a component because I didn't want it to be one, but just know that I could have
-const Toggle = ({ toggleParty }) => {
+const Switch = ({ toggleParty }) => {
   return (
-    <label className="switch ml-auto">
-      <input type="checkbox" onClick={toggleParty} />
-      <span className="slider round"> Party mode</span>
-    </label>
+    <div className="checkbox-wrapper-5">
+      <div className="check">
+        <input id="check-5" type="checkbox" onClick={toggleParty} />
+        <label htmlFor="check-5" />
+      </div>
+    </div>
   )
 }
-
