@@ -5,7 +5,7 @@ import './globals.css'
 const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto-mono',
+  variable: '--font-mono',
 })
 
 const party = Comfortaa({
@@ -14,6 +14,10 @@ const party = Comfortaa({
   display: 'swap',
   variable: '--font-party',
 })
+
+export const metadata = {
+  description: "Hi, I'm Shahbaz. I build web applications in React and Go.",
+}
 
 export default function RootLayout({ children }) {
   return (

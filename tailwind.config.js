@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['var(--font-roboto-mono)'],
+        mono: ['var(--font-mono)'],
         party: ['var(--font-party)']
       },
     },
