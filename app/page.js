@@ -47,7 +47,7 @@ export default function Home() {
         <div className="text-base my-3">
           <a href='Siddiqui_Resume.pdf' target='_blank'>Resume</a> <span> | </span>
           <a href='https://github.com/yalikebaz' target='blank'>Github</a> <span> | </span>
-          <a href='https://www.linkedin.com/in/shay-siddiqui/' target='blank'>LinkedIn</a> <span> | </span>
+          <a href='https://www.linkedin.com/in/shahbaz-sidd/' target='blank'>LinkedIn</a> <span> | </span>
           <a href="mailto:shaysiddi@gmail.com">Email</a>
         </div>
       </section>
