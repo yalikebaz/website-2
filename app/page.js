@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className={`min-h-screen md:px-24 px-8 pt-12 pb-16 overflow-x-hidden ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-mono"}`}>
       <div className={`flex flex-col-reverse md:items-end md:flex-row md:justify-start`}>
-        <h1 className="text-3xl font-bold">hi, I'm Shahbaz</h1>
+        <h1 className="text-3xl font-bold">Shahbaz Siddiqui</h1>
         <Image
           src="/Banana.gif"
           alt="banana"
@@ -24,7 +24,7 @@ export default function Home() {
         />
         <Switch toggleParty={toggleParty} />
       </div>
-      <p className="text-base mt-1 mb-3">I build web applications in React and Go</p>
+      <p className="text-base mt-1 mb-3">I build applications in React and Go</p>
       {party && (
         <Image
           src="/party-parrot.gif"
@@ -47,15 +47,14 @@ export default function Home() {
         <div className="text-base my-3">
           <a href='Siddiqui_Resume.pdf' target='_blank'>Resume</a> <span> | </span>
           <a href='https://github.com/yalikebaz' target='blank'>Github</a> <span> | </span>
-          <a href='https://www.linkedin.com/in/shahbaz-sidd/' target='blank'>LinkedIn</a> <span> | </span>
-          <a href="mailto:shaysiddi@gmail.com">Email</a>
+          <a href='https://www.linkedin.com/in/shahbaz-sidd/' target='blank'>LinkedIn</a> 
         </div>
       </section>
 
       <section>
         <h1 className="text-xl my-5 font-semibold">Currently I'm:</h1>
         <ul>
-          <li>🥷 Building an application in stealth mode </li>
+          <li>💻 Empowering entrepreneurs to launch businesses as a senior software engineer at <a href="https://www.ownr.co/" target="_blank">Ownr</a></li>
         </ul>
       </section>
 
@@ -63,6 +62,7 @@ export default function Home() {
         <h1 className="text-xl my-4 font-semibold">Previously, I:</h1>
         <ul>
           <li>🏅 Built backend Go microservices and APIs as a senior software engineer at <a href="https://www.sportsnet.ca/" target="_blank">SportsNet</a></li>
+          <li>🥷 Stood up Go APIs and Postgres database for a startup in stealth mode</li>
           <li>🏥 Built the React frontend for a government application at <a href="https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html" target="_blank">Deloitte</a></li>
           <li>🏃 Architected the frontend for the <a href="https://www.onepeloton.ca/tread/" target="_blank">Peloton treadmill</a> screen interface</li>
           <li>🧩 Built a <a href="https://chrome.google.com/webstore/detail/tldr/ilngbocobgaemijmabhddjbeidhncaco" target="_blank">Chrome extension</a> to help you learn words</li>
