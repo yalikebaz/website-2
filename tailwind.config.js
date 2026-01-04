@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: ['var(--font-mono)'],
-        party: ['var(--font-party)']
+        party: ['var(--font-party)'],
+        inter: ['var(--font-inter)']
       },
     },
   },

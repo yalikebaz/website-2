@@ -1,6 +1,10 @@
 "use client";
 import Image from 'next/image'
 import { useState } from 'react'
+import Job from '../components/Job.jsx'
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+import { IoNewspaperSharp } from "react-icons/io5";
 
 export default function Home() {
   const [party, setParty] = useState(false)
@@ -10,7 +14,7 @@ export default function Home() {
   }
 
   return (
-    <main className={`min-h-screen md:px-24 px-8 pt-12 pb-16 overflow-x-hidden ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-mono"}`}>
+    <main className={`min-h-screen md:px-24 px-8 pt-8 overflow-x-hidden ${party ? "flashing spotlight font-party cursor tracking-wide space" : "font-inter"}`}>
       <div className={`flex flex-col-reverse md:items-end md:flex-row md:justify-start`}>
         <h1 className="text-3xl font-bold">Shahbaz Siddiqui</h1>
         <Image
@@ -24,7 +28,7 @@ export default function Home() {
         />
         <Switch toggleParty={toggleParty} />
       </div>
-      <p className="text-base mt-1 mb-3">I build applications in React and Go</p>
+      <p className="text-base mt-1">I can build your whole app</p>
       {party && (
         <Image
           src="/party-parrot.gif"
@@ -43,37 +47,33 @@ export default function Home() {
         quality={100}
         className={`disco transition-transform duration-700 ease-in-out ${party ? 'translate-y-0' : '-translate-y-80'} invisible lg:visible`}
       />
-      <section>
-        <div className="text-base my-3">
-          <a href='Siddiqui_Resume.pdf' target='_blank'>Resume</a> <span> | </span>
-          <a href='https://github.com/yalikebaz' target='blank'>Github</a> <span> | </span>
-          <a href='https://www.linkedin.com/in/shahbaz-sidd/' target='blank'>LinkedIn</a> 
+      <section id="socials">
+        <div className="text-base mt-3 mb-9 flex flex-row gap-5">
+          <a href='Siddiqui_Resume.pdf' target='_blank' className='text-[#eaeaea]'>
+            <IoNewspaperSharp size="2rem" />
+          </a>
+          <a href='https://github.com/yalikebaz' target='blank' className='text-[#eaeaea]'>
+            <FaGithubSquare size="2rem" />
+          </a>
+          <a href='https://www.linkedin.com/in/shahbaz-sidd/' target='blank' className='text-[#eaeaea]'>
+            <FaLinkedin size="2rem" />
+          </a>
         </div>
       </section>
 
-      <section>
-        <h1 className="text-xl my-5 font-semibold">Currently I'm:</h1>
-        <ul>
-          <li>💻 Empowering entrepreneurs to launch businesses as a senior software engineer at <a href="https://www.ownr.co/" target="_blank">Ownr</a></li>
-        </ul>
+      <section className="mb-8">
+        <h1 className="text-xl mb-3 font-semibold">Currently</h1>
+        <Job image="/ownr.webp" company="Ownr" title="Senior software engineer" url="https://www.ownr.co/" />
       </section>
 
       <section>
-        <h1 className="text-xl my-4 font-semibold">Previously, I:</h1>
+        <h1 className="text-xl mb-3 font-semibold">Previously</h1>
         <ul>
-          <li>🏅 Built backend Go microservices and APIs as a senior software engineer at <a href="https://www.sportsnet.ca/" target="_blank">SportsNet</a></li>
-          <li>🥷 Stood up Go APIs and Postgres database for a startup in stealth mode</li>
-          <li>🏥 Built the React frontend for a government application at <a href="https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html" target="_blank">Deloitte</a></li>
-          <li>🏃 Architected the frontend for the <a href="https://www.onepeloton.ca/tread/" target="_blank">Peloton treadmill</a> screen interface</li>
-          <li>🧩 Built a <a href="https://chrome.google.com/webstore/detail/tldr/ilngbocobgaemijmabhddjbeidhncaco" target="_blank">Chrome extension</a> to help you learn words</li>
-        </ul>
-      </section>
-
-      <section>
-        <h1 className="text-xl my-5 font-semibold">In my free time I like to:</h1>
-        <ul>
-          <li>🛫 Travel and learn new languages</li>
-          <li>🏓 Topspin my way to victory in ping pong</li>
+          <Job image="/stealth.jpg" company="Stealth Startup" title="Founding engineer" url="https://en.wikipedia.org/wiki/Stealth_startup" />
+          <Job image="/sportsnet.jpg" company="SportsNet" title="Senior software engineer" url="https://www.sportsnet.ca/" />
+          <Job image="/peloton.jpg" company="Peloton" title="Software engineer" url="https://www.onepeloton.ca/tread/" />
+          <Job image="/deloitte.jpg" company="Deloitte" title="Software engineer" url="https://www.deloitte.com/ca/en.html" />
+          <Job image="/chrome.jpg" company="Chrome extension" title="Developer" url="https://chrome.google.com/webstore/detail/tldr/ilngbocobgaemijmabhddjbeidhncaco" />
         </ul>
       </section>
     </main >
